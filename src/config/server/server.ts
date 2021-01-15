@@ -19,12 +19,12 @@ const app: express.Application = express();
 Routes.init(app);
 
 // initialize db
-/* db.authenticate()
+db.authenticate()
 .then(() => {
     console.log('Connected to Database');
     db.sync();
 })
-.catch(err => console.error('Error connecting database', err)) */
+.catch(err => console.error('Error connecting database', err))
 
 /**
  * @constructs express.Application Error Handler

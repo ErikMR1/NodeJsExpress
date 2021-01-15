@@ -15,8 +15,7 @@ export async function findAll(req: Request, res: Response, next: NextFunction): 
         console.log('Body',req.body);
 
 
-        //const users: any[] = await UserFacade.findAll();
-        let users: any[]=[];
+        const users: any[] = await UserFacade.findAll();
         res.status(HttpStatusCode.OK).json(users);
     } catch (error) {
         next(error);

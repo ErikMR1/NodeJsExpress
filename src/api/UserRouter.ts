@@ -43,6 +43,8 @@ const router: Router = Router();
  *              message: Email already exists
  */
 router.get('/users', UserFacade.findAll);
+router.post('/users', UserFacade.findAll);
+
 
 /**
  * GET method route

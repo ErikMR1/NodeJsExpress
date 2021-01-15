@@ -11,7 +11,12 @@ import HttpStatusCode from '../../commons/constants/HttpStatusCode';
  */
 export async function findAll(req: Request, res: Response, next: NextFunction): Promise < void > {
     try {
-        const users: any[] = await UserFacade.findAll();
+        console.log('Query',req.query);
+        console.log('Body',req.body);
+
+
+        //const users: any[] = await UserFacade.findAll();
+        let users: any[]=[];
         res.status(HttpStatusCode.OK).json(users);
     } catch (error) {
         next(error);
